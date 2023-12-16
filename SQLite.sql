@@ -1,3 +1,4 @@
+CREATE TABLE rolling_average AS
 SELECT 
     DATE(transaction_time) AS date,
     AVG(SUM(transaction_amount)) OVER (
